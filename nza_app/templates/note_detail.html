@@ -12,9 +12,7 @@
         <p>Content: {{ note.case_note }}</p>
 
         <blockquote>Date Created: {{ note.date_created }}</blockquote>
-        {{ if note.edited }}
-        <blockquote>Date Modified: {{ note.date_updated }}</blockquote>
-        {{ endif }}
+
 
         <a href="{{ url_for('note_update', note_id = note.id) }}">
             <button class="btn btn-primary">Update Case Note</button>
