@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1 class="justify-content-center">Register for new account!</h1>
+    <div class="justify-content-center">
+        <form method="POST">
+            {{ user_form.hidden_tag() }}
+            <div class="form-group">
+                <fieldset>
+                    {{ user_form.username.label }}
+                    {{ user_form.username(class="form-control", placeholder = "Add User Name")}}
+                </fieldset>
+
+                <fieldset>
+                    {{ user_form.email.label }}
+                    {{ user_form.email(class="form-control", placeholder = "Add Email")}}   
+                </fieldset>
+
+                <fieldset>
+                    {{ user_form.password.label }}
+                    {{ user_form.password(class="form-control", placeholder = "Add Password")}}              
+                </fieldset>
+
+                <fieldset>
+                    {{ user_form.confirm_pass.label }}
+                    {{ user_form.confirm_pass(class="form-control", placeholder = "Confirm your password")}}
+                </fieldset>
+                {{ user_form.submit(class = "btn btn-success")}}
+            </div>
+        </form>
+    </div>
+
+{% endblock content %}

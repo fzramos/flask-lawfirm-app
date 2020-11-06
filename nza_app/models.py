@@ -13,7 +13,7 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 class User(db.Model, UserMixin):
-    id = db.Column(db.Integer, primary_key = True)
+    id = db.Column(db.String(256), primary_key = True)
     username = db.Column(db.String(150), nullable = False, unique=True)
     email = db.Column(db.String(150), nullable = False, unique = True)
     password = db.Column(db.String(256), nullable = False)
@@ -38,7 +38,7 @@ class User(db.Model, UserMixin):
         return f'{self.username} has been created with the following email: {self.email}'
 
 class Note(db.Model):
-    id = db.Column(db.Integer, primary_key = True)
+    id = db.Column(db.String(256), primary_key = True)
     case_name = db.Column(db.String(100))
     case_note = db.Column(db.String(300))
     date_created = db.Column(db.DateTime, nullable = False, default = datetime.utcnow)
@@ -49,7 +49,7 @@ class Note(db.Model):
     def __init__(self,case_name, case_note , user_id = user_id):
         self.case_name = case_name
         self.case_note = case_note
-        # self.user_id = user_id
+        self.user_id = user_id
     
     def __repr__(self):
         return f'The name  of the new case note is {self.case_name} \n and the content is: {self.case_note}.'
