@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>Add a Case Note</h1>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                <fieldset>
+                    {{ form.case_name.label }}
+                    {{ form.case_name(class = "form-control", placeholder = "Add Case Name") }}
+                </fieldset>
+
+                <fieldset>
+                    {{ form.case_note.label }}
+                    {{ form.case_note(class = "form-control", placeholder = "Add Your Notes") }}
+                </fieldset>
+                {{ form.submit(class = "btn btn-success") }}
+            </div>
+        </form>
+    </div>
+
+{% endblock content %}

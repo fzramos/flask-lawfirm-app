@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href="{{ url_for('show_notes') }}">
+        <button class="btn btn-primary">Back to Your Case Notes</button>
+    </a>
+
+    <div class="container">
+        <h3>Case Note Info:</h3>
+        <hr>
+        <h3>Case Name: {{ note.name }}</h3>
+        <p>Content: {{ note.case_note }}</p>
+
+        <blockquote>Date Created: {{ note.date_created }}</blockquote>
+        {{ if note.edited }}
+        <blockquote>Date Modified: {{ note.date_updated }}</blockquote>
+        {{ endif }}
+
+        <a href="{{ url_for('note_update', note_id = note.id) }}">
+            <button class="btn btn-primary">Update Case Note</button>
+        </a>
+
+        <a href="{{ url_for('note_delete', note_id = note.id) }}">
+            <button class="btn btn-danger">Delete Case Note</button>
+        </a>
+    </div>
+
+{% endblock content %}

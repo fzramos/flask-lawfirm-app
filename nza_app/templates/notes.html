@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <header class="banner">
+        <h1 class="header-text">Case Notes</h1>
+    </header>
+
+    <h1>Hello {{current_user.username}}, here are your Case Notes </h1>
+    {% for note in user_notes %}
+        <div class="container">
+            <h3>
+                <a href="{{ url_for('note_detail', note_id = note.id) }}">{{ note.case_name }}</a>
+            </h3>
+            <p>{{ note.case_note }}</p>
+        </div>
+    {% endfor %}
+    
+
+{% endblock content %}
