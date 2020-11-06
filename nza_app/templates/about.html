@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" type=text/css href="{{ url_for('static', filename='about.css') }}">
+{% endblock style %}
+
+{% block content %}
+
+        <div class="left-sidebar">
+            <h4>Who We Are</h4><hr>
+            <p>
+                <a href="#">Welcome</a><br>
+            </p>
+            <p>
+                <a href="#">Attorneys</a><br>
+            </p>            <p>
+                <a href="#">Staff</a><br>
+            </p>            <p>
+                <a href="#">Reputation</a><br>
+            </p>            
+            <p>
+                <a href="#">History</a>
+            </p>
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="270" height="90" id="gmap_canvas" src="https://maps.google.com/maps?q=55%20West%20Monroe%20Street%20Suite%201800%20Chicago%2C%20Illinois%2060603&t=&z=7&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com">what is my ip</a>
+                </div>
+                <style>.mapouter{position:relative;text-align:right;height:50px;width:50px;}.gmap_canvas {overflow:hidden;background:none!important;height:80px;width:200px;}</style>
+            </div>
+            <br>
+            <p>
+            Where We Work
+            <br>
+            Find out more about our work area coverage.
+            </p>
+        </div>
+
+        <div class="content">
+            <div class="first-paragraph">
+                Who we are? That is one of the most important questions a propspective client can ask us. Our answer - one of the most respected law firms in the country that cares about your case, your business, and solving your problem. We invite you to get to know our attorneys bettera and understand the depth of experience and talent we have in the links below
+            </div>
+            <br>
+            <div class="photo-grid">
+            <!--Image for Welcome link-->
+                <img src="../static/images/welcome.jpg" alt="Welcome" width="250" height="120px">
+                <div class="caption1">Welcome</div>
+                <!--Image for Attorneys link-->
+                <img src="../static/images/scrabble_lawyer.jpg" alt="Attorneys" width="250" height="120px">
+                <div class="caption2">Attorneys</div>
+                <!--Image for Staff link-->
+                <img src="../static/images/staff.jpg" alt="Staff" width="250" height="120px">
+                <div class="caption3">Staff</div>
+                <!--Image for Reputation link-->
+                <img src="../static/images/reputation.jpg" alt="Reputation" width="250" height="120px"> 
+                <div class="caption4">Reputation</div>
+                <!--Image for History Link-->
+                <img src="../static/images/history.jpg" alt="History" width="250" height="120px">
+                <div class="caption5">History</div>
+            </div> 
+        </div>
+
+{% endblock content %}
+        

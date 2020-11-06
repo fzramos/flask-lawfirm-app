@@ -1,0 +1,38 @@
+.bookshelf{
+    border-style: double;
+}
+.content{
+    margin-left: 20px;
+    grid-area: content;
+}
+.content > p {
+    margin-right: 30px;
+}
+
+.newsfeed{
+    grid-area: newsfeed;
+    overflow-y: scroll;
+    margin-right: 20px;
+    background-color: rgb(116, 29, 29);
+    color: white;
+    /* height: min-content; */
+    float:right; 
+    height: 300px; 
+    width:200px; 
+    padding:10px; 
+}
+
+.contact > p:first-line { 
+    font-weight: bold; 
+}
+.contact{
+    grid-area: contact;
+    margin-right: 30px;
+    margin-left: 30px;
+    font-size: small;
+}
+.contact > p> a[href^="email"]{
+    color: rgb(116, 29, 29);
+    text-decoration: underline;
+}
+
