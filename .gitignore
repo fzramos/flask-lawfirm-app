@@ -3,3 +3,5 @@
 .vscode
 migrations
 app.db
+.DS_Store
+env
