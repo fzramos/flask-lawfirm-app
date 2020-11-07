@@ -1,0 +1,106 @@
+.wrapper{
+    display: grid;
+    grid-template-areas: 
+        "l_side header     header       r_side"
+        "l_side nav        nav          r_side"
+        "l_side left-sidebar    content      r_side"
+        "l_side left-sidebar    content      r_side"
+        "l_side footer footer r_side";
+}
+.l_side{
+    grid-area: l_side;
+}
+.r_side{
+    grid-area: r_side;
+}
+.side-panel{
+    max-width: 284px;
+    height: 894px;
+}
+.logo{
+    margin-left: 20px;
+    border-style: double;
+}
+
+.header{
+    grid-area: header;
+    
+}
+
+.banner{
+    display: inline-block;
+    width: 277px;
+    font-size: large;
+    margin-left: 4px;
+}  
+
+/* Navigation Bar Content */
+.left-sidebar{
+    margin-left: 20px;
+    grid-area: left-sidebar;
+    margin-right: 30px;
+    background-color: rgb(116, 29, 29);
+    float:left; 
+    height: 470px; 
+    width:200px; 
+    padding:10px;
+    color: white;
+    font-size: small;
+}
+.caption1{
+    color: rgb(116, 29, 29);
+    font-size: 30px;
+    position: absolute;
+    top: 57%;
+    left: 44%;
+    transform: translate(-50%, -50%); 
+}
+.caption2{
+    color: rgb(116, 29, 29);
+    font-size: 30px;
+    position: absolute;
+    top: 57%;
+    left: 64%;
+    transform: translate(-50%, -50%); 
+}
+.caption3{
+    color: rgb(116, 29, 29);
+    font-size: 30px;
+    position: absolute;
+    top: 73%;
+    left: 43%;
+    transform: translate(-50%, -50%); 
+}
+.caption4{
+    color: rgb(116, 29, 29);
+    font-size: 30px;
+    position: absolute;
+    top: 73%;
+    left: 66%;
+    transform: translate(-50%, -50%); 
+}
+.attorney{
+    border-style: solid;
+    border-width: thin;
+    border-color: white;
+}
+.context{
+    padding-left: 1.5em;
+    text-indent:-1.5em;
+}
+.photo-grid{
+    grid-column: col 3 / span 2;
+    grid-row: row 2;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content{
+    grid-area: content;
+}
+.first-paragraph{
+    margin-right: 55px;
+}
+
+

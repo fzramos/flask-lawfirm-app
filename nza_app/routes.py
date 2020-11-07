@@ -21,12 +21,6 @@ def posts():
         return redirect(url_for('show_notes'))
     return render_template('newnote.html', form = form)
 
-# Create new note
-#     newnote.html
-
-# shows all notes for user
-#     notes.html
-
 @app.route('/notes')
 @login_required
 def show_notes():
@@ -84,7 +78,6 @@ def register():
         
     return render_template('register.html',user_form = form)
 
-
 # Update Note Route -- 
 @app.route('/notes/update/<int:note_id>', methods = ['GET', 'POST'])
 @login_required
@@ -112,3 +105,15 @@ def note_delete(note_id):
     db.session.delete(note)
     db.session.commit()
     return redirect(url_for('show_notes'))
+
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/what_we_do')
+def what_we_do():
+    return render_template('what.html')

@@ -1,22 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-<link rel="stylesheet" href="../static/css/main.css">
-<title>NZA Law Firm</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+
+    <link rel="stylesheet" href="../static/css/base.css">
+    {% block style %}
+    {% endblock style %}
+    <!-- <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/what.css">
+    <link rel="stylesheet" href="../static/css/about.css"> -->
+    <title>NZA Law Group</title>
+
 </head>
 <body>
+    <div class="wrapper">
+        <div class="l_side">
+            <img class="side-panel" src="../static/images/perfect.jpeg" alt="blank">
+        </div>
+        <div class="r_side">
+            <img class="side-panel" src="../static/images/perfect.jpeg" alt="blank">
+        </div>
+        <div class="header">
+            <img class="logo" src="https://via.placeholder.com/70x70" alt="logo">
+            <div class="banner">
+                <h1>NIELSEN, ZEHE & ANTAS, P.C.</h1>
+            </div>
+            <div class="users">
+                <a href="#">REGISTER</a>
+                <a href="#">LOGIN</a>
+            </div>
+        </div>
 
+        <div class="nav">
+            <nav>
+                <ul id="bar">
+                    <li>
+                        <a href="{{ url_for('about') }}">WHO WE ARE </a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="{{ url_for('what_we_do') }}">WHAT WE DO</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="#">NEWS & EVENTS</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="#">WHERE WE WORK</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="#">CONTACT US</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    
+            {% block content %}
+            {% endblock content %}
 
-    {% block content %}
-    {% endblock content %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <div class="footer">
+            <footer>
+                <ul>
+                    <li>
+                        <a href="{{ url_for('home') }}">HOME</a>
+                    </li>
+                    <li>-</li>
+                    <li>
+                        <a href="{{ url_for('about') }}">WHO WE ARE</a>
+                    </li>
+                    <li>-</li>
+                    <li>
+                        <a href="{{ url_for('what_we_do') }}">WHAT WE DO</a>
+                    <li>-</li>
+                    <li>
+                        <a href="#">NEWS & EVENTS</a>
+                    </li>
+                    <li>-</li>
+                    <li>
+                        <a href="#">WHERE WE WORK</a>
+                    <li>-</li>
+                    <li>
+                        <a href="#">CONTACT US</a>
+                    </li>
+                </ul>
+                <h6>&copy;2009 Neltse, Zehe & Antas, P.C. // Website Design by OneTen Creative</h6>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>    
 </body>
 </html>
