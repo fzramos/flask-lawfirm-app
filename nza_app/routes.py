@@ -6,7 +6,7 @@ from flask_login import login_required,login_user, current_user, logout_user
 
 @app.route('/notes/create', methods = ['GET', 'POST'])
 @login_required
-def posts():
+def create_note():
     form = NoteForm()
 
     if request.method == 'POST' and form.validate():
@@ -52,6 +52,12 @@ def login():
         else:
             return redirect(url_for('login'))
     return render_template('login.html', login_form = form)
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
 
 @app.route('/register', methods = ['GET','POST'])
 def register():
