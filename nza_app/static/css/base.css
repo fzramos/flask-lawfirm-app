@@ -37,6 +37,11 @@ body {
 
 }
 
+h6 {
+    display: inline-block;
+    margin-top: 40px;
+    margin-right: 20px;
+}
 
 .banner{
     display: inline-block;
@@ -59,11 +64,11 @@ body {
     grid-area: nav; 
 }
 
-.users{
+/* .users{
     position: relative;
     top: -20%;
     right: -60%;
-}
+} */
 
 /* Navigation Bar Content */
 .norm_nav {

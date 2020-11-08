@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 
+{% block style %}
+<link rel="stylesheet" type=text/css href="../static/css/logged.css">
+{% endblock style %}
+
 {% block content %}
 
-    <h1 class="justify-content-center">Register for new account!</h1>
-    <div class="justify-content-center">
+    <div class="container">
+        <h3 class="justify-content-center">Register for new account!</h3>
         <form method="POST">
             {{ user_form.hidden_tag() }}
             <div class="form-group">

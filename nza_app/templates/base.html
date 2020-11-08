@@ -29,8 +29,15 @@
             <img class="side-panel" src="../static/images/perfect.jpeg" alt="blank">
         </div>
 
+        {% block header %}
+        {% endblock header %}
 
-        {% include 'header.html' %}
+        {% if current_user.is_authenticated %}
+            {% include 'header_postlog.html' %}
+        {% else %}
+            {% include 'header_prelog.html' %}
+        {% endif %}
+
         
         {% include 'nav.html' %}
         

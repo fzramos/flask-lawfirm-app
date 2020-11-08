@@ -1,0 +1,37 @@
+<div class="header">
+
+    <!-- <div class="users">
+        <a href="{{ url_for('register') }}">REGISTER</a>
+        <a href="{{ url_for('login') }}">LOGIN</a>
+        <a href="{{ url_for('show_notes') }}">SEE CASE NOTES</a>
+        <a href="{{ url_for('create_note') }}">NEW CASE NOTE</a>
+        <a href="{{ url_for('logout') }}">LOGOUT</a>
+    </div> -->
+    <nav class="navbar navbar-light">
+        <div class="cotainer">
+            <img class="logo" src="https://via.placeholder.com/70x70" alt="logo">
+            <h1 id="company_name">NIELSEN, ZEHE & ANTAS, P.C.</h1>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('show_notes') }}">Case Notes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('create_note') }}">Create a Case Note</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Create a Case Note</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+</div>
