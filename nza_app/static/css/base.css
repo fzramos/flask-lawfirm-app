@@ -33,15 +33,28 @@ body {
 }
 /* Header Starts Here */ 
 .header{
-    
     grid-area: header;
+
 }
+
+
 .banner{
     display: inline-block;
     width: 277px;
     font-size: large;
     margin-left: 4px;
+    margin-top: 10px;
 }  
+
+#company_name {
+    display: inline-block;
+    width: 277px;
+    position: relative;
+    top: 32px;
+    font-size: 39px;
+
+}
+
 .nav{   
     grid-area: nav; 
 }
@@ -53,7 +66,7 @@ body {
 }
 
 /* Navigation Bar Content */
-nav {
+.norm_nav {
     margin-left: 20px;
         border-top: solid black;
         border-bottom: solid black;
@@ -61,18 +74,19 @@ nav {
         height:28px;
     margin-right: 20px; 
     }
-nav ul li {
+.norm_li {
     list-style: none;
     display: inline-block;
     margin: -1px auto;
     font-size: 16px;
     padding: 0;
-    transform: translate(10px, -10px);
+    transform: translate(10px, -4px);
 }
 #bar {
     text-align: justify;
     min-width: 500px;
-    padding-right: 40px;
+    padding-right: 80px;
+    
 }
 #bar:after {
     content: '';
