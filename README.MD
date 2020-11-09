@@ -3,6 +3,7 @@ ChiCodes Week 6 group project.  Building upon the NZA HTML/CSS project, build a 
 
 
 TASKS:
+
 0. Create skeleton of application and design and implement database and it's connection.
 Assigned to: Worked through as a team
 
