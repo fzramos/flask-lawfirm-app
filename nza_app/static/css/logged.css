@@ -18,6 +18,9 @@
     height: 1056px;
 }
 
+updater {
+    grid-area: content;
+}
 
 .header {
     grid-area: header;
@@ -29,10 +32,6 @@
     border-top: solid black;
     border-bottom: solid black;
 }
-
-/* .mini-nav {
-    grid-area: header;
-} */
 
 h5 {
     display: inline-block;

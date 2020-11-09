@@ -84,8 +84,8 @@ def register():
         
     return render_template('register.html',user_form = form)
 
-# Update Note Route -- 
-@app.route('/notes/update/<int:note_id>', methods = ['GET', 'POST'])
+# Update Note Route -- had to make url change here
+@app.route('/update/<int:note_id>', methods = ['GET', 'POST'])
 @login_required
 def note_update(note_id): 
     note = Note.query.get_or_404(note_id)
@@ -102,6 +102,8 @@ def note_update(note_id):
         db.session.commit()
         return redirect(url_for('show_notes'))
     return render_template('note_update.html', update_form = form)
+    # return render_template('newnote.html', form = form)
+
 
 # Delete Route 
 @app.route('/notes/delete/<int:note_id>', methods = ['GET', 'DELETE'])
