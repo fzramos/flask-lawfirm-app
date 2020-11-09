@@ -1,4 +1,4 @@
-PROJECT:
+PROJECT DESCRIPTION:
 ChiCodes Week 6 group project.  Building upon the NZA HTML/CSS project, build a Flask web application which allows lawyers to log in to the website and create, update, delete and retrieve their own case notes (users can only see their own case notes) 
 
 
