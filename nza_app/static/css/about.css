@@ -1,5 +1,7 @@
 .wrapper{
     display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
     grid-template-areas: 
         "l_side header     header       r_side"
         "l_side nav        nav          r_side"
@@ -8,22 +10,81 @@
         "l_side footer footer r_side";
 }
 
+.l_side{
+    grid-area: l_side;
+}
+.r_side{
+    grid-area: r_side;
+}
+.side-panel{
+    object-fit: fill;
+    width: 300px;
+    height: 1056px;
+}
+
+.header {
+    grid-area: header;
+    height: 75px;
+}
+.master-nav {
+    grid-area: nav;
+    height: 50px;
+    border-top: solid black;
+    border-bottom: solid black;
+
+}
+
+/* li.nav-item {
+    height: fit-content;
+} */
+
 .left-sidebar{
-    margin-top: 15px;
+    margin-top: 5px;
     margin-left: 20px;
     grid-area: left-sidebar;
-    margin-right: 30px;
+    margin-right: 5Px;
     background-color: rgb(116, 29, 29);
     float:left; 
     height: 400px; 
-    width:200px; 
-    padding:10px;
+    width:220px; 
+    padding: 10px;
     color: white;
 }
 
 .left-sidebar > p >a[href^="#"] {
     color: white;
 }
+
+
+.norm_nav {
+    margin-left: 20px;
+        border-top: solid black;
+        border-bottom: solid black;
+        padding: 0;
+        height:28px;
+    margin-right: 20px; 
+    }
+.norm_li {
+    list-style: none;
+    display: inline-block;
+    margin: -1px auto;
+    font-size: 16px;
+    padding: 0;
+    transform: translate(10px, -4px);
+}
+#bar {
+    text-align: justify;
+    min-width: 500px;
+    padding-right: 80px; 
+}
+.content{
+    margin-left: 20px;
+    grid-area: content;
+}
+.content > p {
+    margin-right: 30px;
+}
+
 .content{
     grid-area: content;
     margin-right: 20px;
@@ -83,4 +144,20 @@
 }
 ul {
     list-style: none;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 0%;
+    padding: 0%;
+}
+
+.center_bottom {
+    position: absolute;
+    bottom: 8px;
+    left: 50px;
+    font-size: x-large;
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;
 }

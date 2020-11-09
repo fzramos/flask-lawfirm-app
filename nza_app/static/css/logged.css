@@ -6,11 +6,35 @@
     margin-top: 10px;
 }
 
-/* #bar {
-    margin-top: 10px;
+.l_side{
+    grid-area: l_side;
+}
+.r_side{
+    grid-area: r_side;
+}
+.side-panel{
+    object-fit: fill;
+    width: 300px;
+    height: 1056px;
+}
+
+
+.header {
+    grid-area: header;
+    height: 141px;
+}
+.master-nav {
+    grid-area: nav;
+    height: 50px;
+    border-top: solid black;
+    border-bottom: solid black;
+}
+
+/* .mini-nav {
+    grid-area: header;
 } */
 
-nav {
-    margin-bottom: 13px;
-    background-color: white;
+h5 {
+    display: inline-block;
+    margin-right: 20px;
 }

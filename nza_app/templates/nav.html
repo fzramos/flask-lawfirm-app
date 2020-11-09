@@ -1,29 +1,44 @@
-<div class="nav">
+<!-- <div class="nav">
     <nav class="norm_nav">
         <ul id="bar">
             <li class="norm_li">
                 <a href="{{ url_for('about') }}">WHO WE ARE </a>
             </li>
-            <li class="norm_li">|</li>
+            <li class="norm_li">  |  </li>
             <li class="norm_li">
                 <a href="{{ url_for('what_we_do') }}">WHAT WE DO</a>
             </li>
-            <li class="norm_li">|</li>
+            <li class="norm_li">  |  </li>
             <li class="norm_li">
                 <a href="#">NEWS & EVENTS</a>
             </li>
-            <li class="norm_li">|</li>
+            <li class="norm_li">  |  </li>
             <li class="norm_li">
                 <a href="#">WHERE WE WORK</a>
             </li>
-            <li class="norm_li">|</li>
+            <li class="norm_li">  |  </li>
             <li class="norm_li">
                 <a href="#">CONTACT US</a>
             </li>
-            <!-- <li class="norm_li">|</li>
-            <li class="norm_li">
-                <a href="#">LAWYER LOGIN</a>
-            </li> -->
+
         </ul>
     </nav>
-</div>
+</div> -->
+
+<ul class="nav justify-content-center master-nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="{{ url_for('about') }}">WHO WE ARE</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('what_we_do') }}">WHAT WE DO</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">NEWS & EVENTS</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">WHERE WE WORK</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">CONTACT US</a>
+    </li>      
+</ul>

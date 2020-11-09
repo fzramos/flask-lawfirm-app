@@ -18,6 +18,15 @@
                 <p>{{ note.case_note }}</p>
             </div>
         {% endfor %}
+        <a href="{{ url_for('create_note') }}">
+            <button class="btn btn-primary">Create a new case note</button>
+        </a>
+        <a href="{{ url_for('logout') }}">
+            <button class="btn btn-danger">LOGOUT</button>
+        </a>
+
+
+
     </div>
 
     
